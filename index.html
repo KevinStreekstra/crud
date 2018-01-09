@@ -1,0 +1,85 @@
+<!doctype HTML>
+<html>
+<head>
+	<title>Minimal Crud webAPP</title>
+	<link rel="stylesheet" type="text/css" href="css/general.css">
+	<link rel="stylesheet" type="text/css" href="css/list.css">
+</head>
+<body>
+
+<!-- all views/pages/view elements are defined in HTML as sections -->
+
+<section id="list">
+<!-- This is what you see if you interact with the list, in this case, just about always :) -->
+	<header>
+	  <h1>Bibliotheek eredivisie clubs</h1>
+	</header>
+	<main>
+		<ul id="boekenlijst">
+
+		</ul>
+	</main>
+	<footer>
+		<button id="createRecordButton">Maak je club</button>
+		<button id="clearDataButton">Database leegmaken</button>
+		<button id="initDataButton">Genereer club</button>
+	</footer>
+</section>
+
+<section id="create">
+	<header>
+	  <h1>Maak je lijst voor een club</h1>
+	 </header>
+	 <main>
+		<div>
+			<div class="label">Club:</div>
+			<input class="isbn" />
+		</div>
+		<div>
+			<div class="label">Informatie:</div>
+			<input class="title" />
+		</div>
+		<div>
+			<div class="label">Schrijver:</div>
+			<input class="auteur" />
+		</div>
+	 </main>
+	 <footer>
+		<button class="ok">Opslaan</button>
+		<button class="cancel">Annuleren</button>
+	 </footer>
+</section>
+
+<section id="update">
+	 <header>
+	  <h1>Update je lijst </h1>
+	 </header>
+	 <main>
+		<div>
+			<div class="label">Club:</div>
+			<input class="isbn" />
+		</div>
+		<div>
+			<div class="label">Informatie:</div>
+			<input class="title" />
+		</div>
+		<div>
+			<div class="label">Schrijver:</div>
+			<input class="auteur" />
+		</div>
+	 </main>
+	 <footer>
+		<button class="ok">Opslaan</button>
+		<button class="cancel">Annuleren</button>
+	 </footer>
+</section>
+
+
+<script src="js/model/listModel.js"></script>
+<script src="js/view/listView.js"></script>
+<script src="js/view/createView.js"></script>
+<script src="js/view/updateView.js"></script>
+<script src="js/controller/controller.js"></script> <!-- hides all sections that are NOT in use, inits model, so load last! -->
+
+</body>
+<html>
